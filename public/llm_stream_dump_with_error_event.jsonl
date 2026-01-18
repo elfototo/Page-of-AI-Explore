@@ -1,0 +1,8 @@
+{"event":"token","data":{"delta":"Давайте построим график выручки по регионам.\n"}}
+{"event":"token","data":{"delta":"Для этого используем столбчатую диаграмму (bar chart).\n"}}
+{"event":"token","data":{"delta":"По оси X будут регионы, по оси Y — сумма выручки.\n\n"}}
+{"event":"token","data":{"delta":"Ниже приведён Vega-Lite spec:\n"}}
+{"event":"token","data":{"delta":"```json\n"}}
+{"event":"token","data":{"delta":"{\n"}}
+{"event":"token","data":{"delta":"  \"mark\": \"bar\",\n"}}
+{"event":"error","data":{"message":"Превышен лимит токенов. Пожалуйста, попробуйте снова."}}

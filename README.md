@@ -2,6 +2,17 @@
 
 Приложение для эмуляции SSE-потока LLM и визуализации Vega-Lite графиков.
 
+## Screenshots
+
+### Desktop view
+![Desktop view](screenshots/app-desktop.png)
+
+### Responsive layout (mobile)
+![Mobile view](screenshots/app-mobile.png)
+
+### Error state
+![Error state](screenshots/app-desktop_error_state.png)
+
 ## Как запустить
 
 ### Установка и запуск
@@ -28,7 +39,7 @@ npm run build
    - Правая панель — превью Vega-Lite графика
 4. **Управление**: используйте кнопки Stop и Reset по необходимости
 
-## 🏗️ Архитектура решения
+## Архитектура решения
 
 ### Обработка LLM streaming
 

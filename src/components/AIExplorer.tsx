@@ -31,10 +31,10 @@ export default function AIExplorer() {
   };
 
   return (
-    <div className="p-5 sm:p-10 w-full lg:w-4xl">
+    <div className="mx-2 w-full sm:w-xl lg:w-4xl">
       <div className="mx-auto w-full h-full">
         <h1 className="font-bold text-4xl sm:text-5xl">
-          AI Explorer - Vega-Lite Streaming
+          AI Explorer
         </h1>
 
         <div className="m-5 text-center">

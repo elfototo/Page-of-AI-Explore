@@ -2,6 +2,8 @@
 
 Приложение для эмуляции SSE-потока LLM и визуализации Vega-Lite графиков.
 
+[Ссылка на приложение](https://page-of-ai-explore.vercel.app)
+
 ## Screenshots
 
 ### Desktop

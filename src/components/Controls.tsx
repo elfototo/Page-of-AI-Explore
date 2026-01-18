@@ -11,6 +11,7 @@ type ControlsProps = {
   stop: () => void;
   playbackSpeed: number;
   setPlaybackSpeed: (speed: number) => void;
+  fileName: string;
 };
 
 export const Controls = ({
@@ -23,21 +24,30 @@ export const Controls = ({
   stop,
   playbackSpeed,
   setPlaybackSpeed,
+  fileName,
 }: ControlsProps) => {
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col gap-5 lg:gap-0 lg:justify-between lg:flex-row mb-5">
-        <label className="mx-auto lg:mx-0">
-          <span className="text-sm font-semibold block mb-2 text-center lg:text-start w-full">
-            Выберите JSONL файл:
-          </span>
-          <input
-            type="file"
-            accept=".jsonl"
-            onChange={handleFileLoad}
-            className="block text-sm file:cursor-pointer w-full file:mr-5 file:py-2 file:px-4 file:rounded hover:file:bg-blue-500 file:bg-blue-600 file:text-white file:transition-all file:duration-150"
-          />
-        </label>
+        <div className="flex flex-col text-start gap-4">
+          <p className="font-semibold">Выберите JSONL файл:</p>
+          <label className="grid sm:flex items-center gap-4 cursor-pointer text-center">
+            <input
+              type="file"
+              accept=".jsonl"
+              onChange={handleFileLoad}
+              className="hidden"
+            />
+
+            <span className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition whitespace-nowrap">
+              Выбрать файл
+            </span>
+
+            <span className="text-sm text-gray-600 truncate block">
+              {fileName || "Файл не выбран"}
+            </span>
+          </label>
+        </div>
 
         <div className="grid gap-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

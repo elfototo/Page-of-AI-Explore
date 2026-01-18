@@ -9,6 +9,7 @@ import { STATUS_COLORS, PLAYBACK_SPEED } from "../config/constants";
 export default function AIExplorer() {
   const [dump, setDump] = useState("");
   const [playbackSpeed, setPlaybackSpeed] = useState(Number(PLAYBACK_SPEED.DEFAULT));
+  const [fileName, setFileName] = useState<string>("")
 
   const { status, streamedText, isPlaying, play, stop, reset, errorMessage } =
     useSSEPlayer(dump, playbackSpeed);
@@ -20,6 +21,7 @@ export default function AIExplorer() {
   const handleFileLoad = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    setFileName(file.name)
 
     const reader = new FileReader();
     reader.onload = (event) => {
@@ -59,9 +61,11 @@ export default function AIExplorer() {
             reset={reset}
             playbackSpeed={playbackSpeed}
             setPlaybackSpeed={setPlaybackSpeed}
+            fileName={fileName}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden w-[100%] lg:h-96">
+          <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden lg:h-96">
+              
             <StreamingOutput
               text={streamedText}
               isStreaming={status === "streaming"}

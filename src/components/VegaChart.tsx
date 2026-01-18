@@ -79,7 +79,8 @@ export const VegaChart: React.FC<{ spec: VegaSpec | null }> = ({ spec }) => {
           Загрузка графика...
         </div>
       )}
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full"></div>
+      <div className="flex items-center justify-center">
         <div ref={containerRef} className="min-h-[300px]"></div>
       </div>
     </div>

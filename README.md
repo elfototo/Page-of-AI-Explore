@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-### Desktop view
+### Desktop
 ![Desktop view](screenshots/app-desktop.png)
 
 ### Responsive layout (mobile)

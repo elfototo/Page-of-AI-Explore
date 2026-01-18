@@ -71,7 +71,7 @@ export const StreamingOutput: React.FC<{
   };
 
   return (
-    <div className="border text-start w-full border-gray-300 rounded-lg p-4 bg-white text-sm whitespace-pre-wrap lg:h-96 overflow-y-auto relative">
+    <div className="border text-start w-full border-gray-300 rounded-lg p-4 bg-white text-sm whitespace-pre-wrap h-96 overflow-y-auto">
       <h3 className="text-lg font-semibold mb-3 font-sans">Streaming Output</h3>
       {text ? (
         highlightJSON(text)

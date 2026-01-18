@@ -1,6 +1,6 @@
 import type { SSEStatus, StreamEvent } from "../types/sse";
 import { useState, useRef, useEffect } from "react";
-import { SSE_DELAY } from "../constants";
+import { SSE_DELAY } from "../config/constants";
 
 export const useSSEPlayer = (dump: string, playbackSpeed: number = 1) => {
   const [status, setStatus] = useState<SSEStatus>('idle');
@@ -56,6 +56,7 @@ export const useSSEPlayer = (dump: string, playbackSpeed: number = 1) => {
       currentLineRef.current++;
 
       const baseDelay = Math.random() * (SSE_DELAY.MAX - SSE_DELAY.MIN) + SSE_DELAY.MIN;
+      
       const adjustedDelay = baseDelay / playbackSpeed;
       timeoutRef.current = window.setTimeout(playNextLine, adjustedDelay);
     };

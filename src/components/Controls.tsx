@@ -1,5 +1,5 @@
 import type { SSEStatus } from "../types/sse";
-import { PLAYBACK_SPEED } from "../constants";
+import { PLAYBACK_SPEED } from "../config/constants";
 
 type ControlsProps = {
   handleFileLoad: (e: React.ChangeEvent<HTMLInputElement>) => void;

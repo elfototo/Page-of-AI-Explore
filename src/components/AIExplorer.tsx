@@ -4,7 +4,7 @@ import { useSSEPlayer } from "../hooks/useSSEPlayer";
 import { StreamingOutput } from "../components/StreamingOutput";
 import { Controls } from "./Controls";
 import { VegaChart } from "./VegaChart";
-import { STATUS_COLORS, PLAYBACK_SPEED } from "../constants";
+import { STATUS_COLORS, PLAYBACK_SPEED } from "../config/constants";
 
 export default function AIExplorer() {
   const [dump, setDump] = useState("");

@@ -27,13 +27,20 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
-  /* min-width: 320px;
-  min-height: 100vh; */
   box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f1f5f9;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #f1f5f9;

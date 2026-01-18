@@ -31,7 +31,7 @@ export default function AIExplorer() {
   };
 
   return (
-    <div className="mx-2 w-full sm:w-xl lg:w-4xl">
+    <div className="mx-1 sm:w-xl lg:w-4xl">
       <div className="mx-auto w-full h-full">
         <h1 className="font-bold text-4xl sm:text-5xl">
           AI Explorer
